@@ -8,16 +8,17 @@
   <!-- Google Fonts & Font Awesome Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Hind+Siliguri:wght@400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
     :root {
-      --bg-dark: #050811;
+      --bg-dark: #04060d;
       --card-bg: rgba(255, 255, 255, 0.03);
       --card-border: rgba(255, 255, 255, 0.08);
       --primary-cyan: #00f2fe;
       --primary-blue: #0052cc;
+      --accent-gold: #f59e0b;
       --accent-green: #10b981;
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
@@ -37,7 +38,7 @@
       overflow-x: hidden;
     }
 
-    /* Ambient Glow Effects */
+    /* Royal Ambient Background Glow */
     .glow-bg {
       position: absolute;
       top: 0;
@@ -46,13 +47,13 @@
       width: 100%;
       max-width: 1200px;
       height: 600px;
-      background: radial-gradient(circle, rgba(0, 82, 204, 0.2) 0%, rgba(0, 242, 254, 0.05) 50%, transparent 80%);
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.12) 0%, rgba(0, 242, 254, 0.06) 40%, transparent 80%);
       filter: blur(90px);
       z-index: 0;
       pointer-events: none;
     }
 
-    /* Top Glass Contact Bar */
+    /* Top Contact Bar */
     .top-bar {
       position: relative;
       z-index: 10;
@@ -120,14 +121,14 @@
       100% { transform: scale(0.95); opacity: 0.8; }
     }
 
-    /* Main Navigation Header (With Logo and Button) */
+    /* Header Navigation & Brand Logo */
     .header-nav {
       position: sticky;
       top: 0;
       z-index: 99;
-      background: rgba(5, 8, 17, 0.85);
+      background: rgba(4, 6, 13, 0.88);
       backdrop-filter: blur(15px);
-      border-bottom: 1px solid var(--card-border);
+      border-bottom: 1px solid rgba(245, 158, 11, 0.2);
       padding: 14px 20px;
     }
 
@@ -139,25 +140,25 @@
       align-items: center;
     }
 
-    /* Custom Brand Logo */
     .brand-logo {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       text-decoration: none;
     }
 
     .logo-icon {
-      width: 44px;
-      height: 44px;
-      background: #0052cc;
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, #f59e0b 0%, #b45309 100%);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #fff;
-      font-size: 20px;
-      box-shadow: 0 0 15px rgba(0, 82, 204, 0.5);
+      font-size: 22px;
+      box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.3);
     }
 
     .logo-text {
@@ -166,23 +167,29 @@
     }
 
     .logo-title {
-      font-size: 17px;
-      font-weight: 800;
-      color: #ffffff;
-      letter-spacing: 0.8px;
+      font-family: 'Cinzel', serif;
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: 2px;
       line-height: 1.1;
+      background: linear-gradient(135deg, #ffffff 0%, #fef3c7 40%, #f59e0b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
     }
 
     .logo-sub {
+      font-family: 'Cinzel', serif;
       font-size: 11px;
       font-weight: 700;
       color: #38bdf8;
-      letter-spacing: 1.5px;
+      letter-spacing: 3px;
+      margin-top: 2px;
     }
 
-    /* Header Nav Action Button */
     .nav-btn {
-      background: #0052cc;
+      background: linear-gradient(135deg, #0052cc, #002b80);
+      border: 1px solid rgba(56, 189, 248, 0.4);
       color: #ffffff;
       padding: 10px 22px;
       border-radius: 10px;
@@ -197,18 +204,17 @@
     }
 
     .nav-btn:hover {
-      background: #003db3;
+      background: linear-gradient(135deg, #003db3, #001f5c);
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 82, 204, 0.6);
     }
 
     /* Hero Section */
     .hero {
       position: relative;
       z-index: 1;
-      padding: 50px 20px 40px 20px;
+      padding: 60px 20px 40px 20px;
       text-align: center;
-      max-width: 900px;
+      max-width: 950px;
       margin: 0 auto;
     }
 
@@ -216,29 +222,48 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(0, 82, 204, 0.15);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      padding: 6px 20px;
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      padding: 6px 22px;
       border-radius: 30px;
       font-size: 13px;
       font-weight: 600;
-      color: #38bdf8;
-      margin-bottom: 22px;
+      color: #f59e0b;
+      margin-bottom: 25px;
+      box-shadow: 0 0 15px rgba(245, 158, 11, 0.15);
     }
 
-    .hero-title {
-      font-size: clamp(32px, 5vw, 54px);
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 16px;
-      color: #ffffff;
+    /* Royal Title Typography */
+    .royal-title-wrap {
+      margin-bottom: 20px;
+    }
+
+    .royal-heading-main {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: 2px;
+      background: linear-gradient(135deg, #ffffff 0%, #fef3c7 35%, #f59e0b 70%, #d97706 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 35px rgba(245, 158, 11, 0.3);
+      text-transform: uppercase;
+    }
+
+    .royal-heading-sub {
+      font-size: clamp(20px, 3.5vw, 28px);
+      font-weight: 700;
+      color: #38bdf8;
+      letter-spacing: 1px;
+      margin-top: 8px;
     }
 
     .hero-subtitle {
       font-size: clamp(15px, 2vw, 18px);
       color: var(--text-muted);
-      max-width: 680px;
-      margin: 0 auto 32px auto;
+      max-width: 700px;
+      margin: 0 auto 35px auto;
       line-height: 1.8;
     }
 
@@ -265,14 +290,15 @@
     }
 
     .btn-primary {
-      background: #0052cc;
-      color: #ffffff;
-      box-shadow: 0 8px 25px rgba(0, 82, 204, 0.4);
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #000;
+      font-weight: 800;
+      box-shadow: 0 8px 25px rgba(245, 158, 11, 0.35);
     }
 
     .btn-primary:hover {
-      background: #0040a8;
       transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(245, 158, 11, 0.5);
     }
 
     .btn-secondary {
@@ -283,11 +309,183 @@
 
     .btn-secondary:hover {
       background: rgba(255, 255, 255, 0.08);
-      border-color: #0052cc;
+      border-color: #f59e0b;
       transform: translateY(-3px);
     }
 
-    /* Connection Application Form Section */
+    /* Speed Meter Simulator Box */
+    .speedtest-box {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 35px 25px;
+      max-width: 750px;
+      margin: 0 auto 60px auto;
+      text-align: center;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .speed-gauge {
+      font-size: 52px;
+      font-weight: 800;
+      color: #38bdf8;
+      margin: 20px 0;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .speed-stats {
+      display: flex;
+      justify-content: space-around;
+      gap: 15px;
+      margin-top: 25px;
+      padding-top: 20px;
+      border-top: 1px solid var(--card-border);
+    }
+
+    .stat-card {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .stat-card span {
+      display: block;
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 4px;
+    }
+
+    /* Route Coverage Section */
+    .coverage-section {
+      max-width: 1100px;
+      margin: 0 auto 70px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .section-title p {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-top: 5px;
+    }
+
+    .route-map-card {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(4, 6, 13, 0.95) 100%);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      border-radius: 24px;
+      padding: 40px 30px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .route-header {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .route-header h3 {
+      font-size: 24px;
+      color: #f59e0b;
+      margin-bottom: 8px;
+    }
+
+    .route-header p {
+      color: var(--text-muted);
+      font-size: 14.5px;
+    }
+
+    .route-timeline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      margin: 40px 0;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .route-timeline::before {
+      content: '';
+      position: absolute;
+      top: 25px;
+      left: 50px;
+      right: 50px;
+      height: 4px;
+      background: linear-gradient(90deg, #f59e0b, #00f2fe, #10b981);
+      z-index: 1;
+    }
+
+    .route-node {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      flex: 1;
+      min-width: 110px;
+    }
+
+    .node-icon {
+      width: 52px;
+      height: 52px;
+      background: #04060d;
+      border: 3px solid #f59e0b;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #f59e0b;
+      font-size: 18px;
+      margin-bottom: 12px;
+      box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .route-node:hover .node-icon {
+      background: #f59e0b;
+      color: #000;
+      transform: scale(1.1);
+    }
+
+    .node-title {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 3px;
+    }
+
+    .node-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .map-container {
+      margin-top: 30px;
+      width: 100%;
+      height: 350px;
+      border-radius: 16px;
+      border: 1px solid var(--card-border);
+      overflow: hidden;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Application Form Section */
     .apply-section {
       max-width: 800px;
       margin: 0 auto 60px auto;
@@ -338,7 +536,7 @@
     .form-group label {
       font-size: 14px;
       font-weight: 600;
-      color: #38bdf8;
+      color: #f59e0b;
     }
 
     .form-control {
@@ -353,120 +551,14 @@
     }
 
     .form-control:focus {
-      border-color: #0052cc;
+      border-color: #f59e0b;
       background: rgba(255, 255, 255, 0.08);
-      box-shadow: 0 0 10px rgba(0, 82, 204, 0.3);
+      box-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
     }
 
     .form-control option {
-      background: #050811;
+      background: #04060d;
       color: #fff;
-    }
-
-    /* Speed Test Simulator */
-    .speedtest-box {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 24px;
-      padding: 35px 25px;
-      max-width: 750px;
-      margin: 0 auto 60px auto;
-      text-align: center;
-      backdrop-filter: blur(12px);
-    }
-
-    .speed-gauge {
-      font-size: 48px;
-      font-weight: 800;
-      color: #38bdf8;
-      margin: 20px 0;
-      font-family: 'Outfit', sans-serif;
-    }
-
-    .speed-stats {
-      display: flex;
-      justify-content: space-around;
-      gap: 15px;
-      margin-top: 25px;
-      padding-top: 20px;
-      border-top: 1px solid var(--card-border);
-    }
-
-    .stat-card {
-      font-size: 14px;
-      color: var(--text-muted);
-    }
-
-    .stat-card span {
-      display: block;
-      font-size: 20px;
-      font-weight: 700;
-      color: #fff;
-      margin-top: 4px;
-    }
-
-    /* Coverage Map Section */
-    .coverage-section {
-      max-width: 1150px;
-      margin: 0 auto 70px auto;
-      padding: 0 20px;
-    }
-
-    .coverage-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
-      align-items: center;
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 24px;
-      padding: 30px;
-    }
-
-    .coverage-info h3 {
-      font-size: 26px;
-      color: #fff;
-      margin-bottom: 12px;
-    }
-
-    .coverage-info p {
-      color: var(--text-muted);
-      font-size: 15px;
-      line-height: 1.7;
-      margin-bottom: 20px;
-    }
-
-    .area-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .area-tag {
-      background: rgba(0, 82, 204, 0.15);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      color: #38bdf8;
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-size: 13.5px;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .map-embed {
-      width: 100%;
-      height: 320px;
-      border-radius: 18px;
-      border: 1px solid var(--card-border);
-      overflow: hidden;
-    }
-
-    .map-embed iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
     }
 
     /* Packages Section */
@@ -474,17 +566,6 @@
       max-width: 1200px;
       margin: 0 auto 70px auto;
       padding: 0 20px;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 35px;
-    }
-
-    .section-title h2 {
-      font-size: 32px;
-      font-weight: 700;
-      color: #fff;
     }
 
     .packages-grid {
@@ -507,20 +588,20 @@
     }
 
     .pkg-card:hover {
-      border-color: #0052cc;
+      border-color: #f59e0b;
       transform: translateY(-6px);
       background: rgba(255, 255, 255, 0.05);
     }
 
     .pkg-card.featured {
-      border-color: #0052cc;
-      background: linear-gradient(180deg, rgba(0, 82, 204, 0.15) 0%, rgba(255, 255, 255, 0.02) 100%);
+      border-color: #f59e0b;
+      background: linear-gradient(180deg, rgba(245, 158, 11, 0.12) 0%, rgba(255, 255, 255, 0.02) 100%);
     }
 
     .pkg-name {
       font-size: 22px;
       font-weight: 700;
-      color: #38bdf8;
+      color: #f59e0b;
       margin-bottom: 6px;
     }
 
@@ -555,219 +636,4 @@
       margin-bottom: 9px;
       display: flex;
       align-items: center;
-      gap: 9px;
-    }
-
-    .pkg-features li i {
-      color: var(--accent-green);
-    }
-
-    /* Floating Contact Buttons */
-    .floating-container {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      z-index: 100;
-    }
-
-    .float-btn {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 22px;
-      color: #fff;
-      text-decoration: none;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-      transition: all 0.3s ease;
-    }
-
-    .float-phone {
-      background: #0052cc;
-    }
-
-    .float-whatsapp {
-      background: #25d366;
-    }
-
-    .float-btn:hover {
-      transform: scale(1.1);
-    }
-
-    /* Footer */
-    footer {
-      border-top: 1px solid var(--card-border);
-      padding: 30px 20px;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 14px;
-    }
-
-    @media (max-width: 600px) {
-      .top-bar-container { justify-content: center; }
-      .btn-group { flex-direction: column; }
-      .btn-main { width: 100%; justify-content: center; }
-      .header-container { gap: 10px; }
-      .nav-btn { padding: 8px 14px; font-size: 13px; }
-      .form-card { padding: 25px 18px; }
-    }
-  </style>
-</head>
-<body>
-
-  <div class="glow-bg"></div>
-
-  <!-- Top Contact Bar -->
-  <div class="top-bar">
-    <div class="top-bar-container">
-      <div class="top-contacts">
-        <a href="tel:+8801834259876"><i class="fa-solid fa-phone"></i> +880 1834-259876</a>
-        <a href="mailto:vaivisson@gmail.com"><i class="fa-solid fa-envelope"></i> vaivisson@gmail.com</a>
-      </div>
-      <div class="status-badge">
-        <span class="pulse-dot"></span>
-        <span>Network Active</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Main Navigation Header (Original Logo Layout) -->
-  <header class="header-nav">
-    <div class="header-container">
-      <!-- Company Logo -->
-      <a href="#" class="brand-logo">
-        <div class="logo-icon">
-          <i class="fa-solid fa-list-check"></i>
-        </div>
-        <div class="logo-text">
-          <span class="logo-title">AKASH ONLINE</span>
-          <span class="logo-sub">NETWORK</span>
-        </div>
-      </a>
-
-      <!-- Original Action Button -->
-      <a href="#apply" class="nav-btn">
-        সংযোাগ নিন <i class="fa-solid fa-arrow-up-right-from-square"></i>
-      </a>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-tag">
-      <span class="pulse-dot"></span> INTERNET & NETWORK SOLUTIONS
-    </div>
-    
-    <h1 class="hero-title">Akash Online Network</h1>
-    
-    <p class="hero-subtitle">
-      AKASH ONLINE NETWORK — বাসা, অফিস ও ব্যবসার জন্য ইন্টারনেট এবং নেটওয়ার্ক সলিউশন। আপনার সংযোগের প্রয়োজন নিয়ে আজই আমাদের সঙ্গে কথা বলুন।
-    </p>
-
-    <div class="btn-group">
-      <a href="#apply" class="btn-main btn-primary">
-        নতুন সংযোগের জন্য আবেদন করুন &rarr;
-      </a>
-      <a href="#packages" class="btn-main btn-secondary">
-        সার্ভিস দেখুন
-      </a>
-    </div>
-  </section>
-
-  <!-- Online Application Form Section -->
-  <section id="apply" class="apply-section">
-    <div class="form-card">
-      <div class="form-title">
-        <h2><i class="fa-solid fa-paper-plane" style="color: #38bdf8;"></i> নতুন সংযোগের জন্য আবেদন করুন</h2>
-        <p>নিচের ফরমটি পূরণ করুন, আমাদের টিম দ্রুত আপনার সাথে যোগাযোগ করবে</p>
-      </div>
-
-      <form onsubmit="submitForm(event)">
-        <div class="form-grid">
-          <div class="form-group">
-            <label>আপনার নাম *</label>
-            <input type="text" id="custName" class="form-control" placeholder="আপনার পূর্ণ নাম লিখুন" required>
-          </div>
-
-          <div class="form-group">
-            <label>মোবাইল নম্বর *</label>
-            <input type="tel" id="custPhone" class="form-control" placeholder="018XXXXXXXX" required>
-          </div>
-
-          <div class="form-group">
-            <label>আপনার এলাকা/লোকেশন *</label>
-            <select id="custArea" class="form-control" required>
-              <option value="">লোকেশন নির্বাচন করুন</option>
-              <option value="বাস টার্মিনাল">বাস টার্মিনাল</option>
-              <option value="মাস্টার পাড়া">মাস্টার পাড়া</option>
-              <option value="প্রাইম মেডিকেল">প্রাইম মেডিকেল</option>
-              <option value="পীরজাবাদ সরকার পাড়া">পীরজাবাদ সরকার পাড়া</option>
-              <option value="দরগার পার">দরগার পার</option>
-              <option value="সুলতান মোড়">সুলতান মোড়</option>
-              <option value="অন্যান্য">অন্যান্য এলাকা</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>পছন্দের প্যাকেজ *</label>
-            <select id="custPkg" class="form-control" required>
-              <option value="">প্যাকেজ নির্বাচন করুন</option>
-              <option value="পায়রা+ (35 Mbps - ৳525)">পায়রা+ (35 Mbps - ৳৫২৫)</option>
-              <option value="মেঘনা (40 Mbps - ৳600)">মেঘনা (40 Mbps - ৳৬০০)</option>
-              <option value="যমুনা (50 Mbps - ৳700)">যমুনা (50 Mbps - ৳৭০০)</option>
-              <option value="সুরমা (60 Mbps - ৳800)">সুরমা (60 Mbps - ৳৮০০)</option>
-              <option value="তিস্তা (100 Mbps - ৳1000)">তিস্তা (100 Mbps - ৳১০০০)</option>
-              <option value="কর্ণফুলী (130 Mbps - ৳1300)">কর্ণফুলী (130 Mbps - ৳১৩০০)</option>
-              <option value="তিতাস (150 Mbps - ৳1500)">তিতাস (150 Mbps - ৳১৫০০)</option>
-              <option value="ব্রহ্মপুত্র (200 Mbps - ৳2000)">ব্রহ্মপুত্র (200 Mbps - ৳২০০০)</option>
-              <option value="চিত্রা (250 Mbps - ৳2500)">চিত্রা (250 Mbps - ৳২৫০০)</option>
-            </select>
-          </div>
-
-          <div class="form-group full-width">
-            <label>সম্পূর্ণ ঠিকানাসমূহ *</label>
-            <textarea id="custAddr" class="form-control" rows="3" placeholder="বাসা/বিল্ডিং নং, রোড নং বা বিস্তারিত ঠিকানা" required></textarea>
-          </div>
-        </div>
-
-        <button type="submit" class="btn-main btn-primary" style="width: 100%; justify-content: center; margin-top: 20px;">
-          <i class="fa-solid fa-circle-check"></i> আবেদন জমা দিন
-        </button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Speed Test Simulator -->
-  <div class="speedtest-box">
-    <h3 style="color: #fff; font-size: 22px;"><i class="fa-solid fa-gauge-high" style="color: #38bdf8;"></i> লাইভ স্পিড টেস্ট সিমুলেটর</h3>
-    <p style="color: var(--text-muted); font-size: 14px; margin-top: 4px;">আপনার কানেকশনের গতি পরীক্ষা করুন</p>
-    
-    <div class="speed-gauge" id="speedNum">0.0 <span>Mbps</span></div>
-
-    <button class="btn-main btn-primary" id="testBtn" onclick="runSpeedTest()">
-      <i class="fa-solid fa-play"></i> টেস্ট শুরু করুন
-    </button>
-
-    <div class="speed-stats">
-      <div class="stat-card">পিং (Ping): <span id="pingVal">-- ms</span></div>
-      <div class="stat-card">ডাউনলোড: <span id="downVal">-- Mbps</span></div>
-      <div class="stat-card">আপলোড: <span id="upVal">-- Mbps</span></div>
-    </div>
-  </div>
-
-  <!-- Coverage Map & Areas Section -->
-  <section id="coverage" class="coverage-section">
-    <div class="section-title">
-      <h2>আমাদের কভারেজ এরিয়া</h2>
-      <p style="color: var(--text-muted); font-size: 15px; margin-top: 5px;">রংপুর বাস টার্মিনাল থেকে সুলতান মোড় পর্যন্ত সংযোগ সেবা দেওয়া হয়</p>
-    </div>
-
-    <div class="coverage-grid">
-      <div class="coverage-info">
-        <h3><i class="fa-solid fa-map-location-dot" style="color: #38bdf8;"></i> সার্ভিস এরিয়া সমুহ</h3>
-        <p>আমরা রংপুর শহরের নিম্নলিখিত গুরুত্বপূর্ণ এলাকাসমূহে হাই-স্পিড ফাইবার অপট
+      gap:
