@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Akash Online Network — High-Speed Internet Solutions</title>
+  <title>Akash Online Network — Next-Gen Fiber Internet</title>
 
   <!-- Google Fonts & Font Awesome Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
     :root {
-      --bg-dark: #060913;
+      --bg-dark: #050811;
       --card-bg: rgba(255, 255, 255, 0.03);
       --card-border: rgba(255, 255, 255, 0.08);
       --primary-cyan: #00f2fe;
       --primary-blue: #4facfe;
-      --accent-purple: #7f00ff;
-      --text-main: #f1f5f9;
+      --accent-green: #10b981;
+      --text-main: #f8fafc;
       --text-muted: #94a3b8;
     }
 
@@ -38,39 +38,39 @@
       position: relative;
     }
 
-    /* Ambient Background Glows */
-    .glow-orb-1 {
+    /* Ambient Glow Effects */
+    .glow-bg {
       position: absolute;
-      top: -100px;
+      top: 0;
       left: 50%;
       transform: translateX(-50%);
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(0, 242, 254, 0.15) 0%, rgba(127, 0, 255, 0.05) 50%, transparent 70%);
-      filter: blur(80px);
+      width: 100%;
+      max-width: 1200px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(0, 242, 254, 0.12) 0%, rgba(79, 172, 254, 0.05) 50%, transparent 80%);
+      filter: blur(90px);
       z-index: 0;
       pointer-events: none;
     }
 
-    /* Top Glass Bar */
+    /* Top Contact Bar */
     .top-bar {
       position: relative;
       z-index: 10;
       background: rgba(255, 255, 255, 0.02);
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(15px);
       border-bottom: 1px solid var(--card-border);
       padding: 10px 20px;
-      font-size: 14px;
     }
 
     .top-bar-container {
-      max-width: 1100px;
+      max-width: 1150px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
     }
 
     .top-contacts {
@@ -85,39 +85,39 @@
       display: flex;
       align-items: center;
       gap: 8px;
+      font-size: 14px;
       transition: all 0.3s ease;
       font-weight: 500;
     }
 
     .top-contacts a:hover {
       color: var(--primary-cyan);
-      transform: translateY(-1px);
     }
 
-    .network-badge {
+    .status-badge {
       display: flex;
       align-items: center;
       gap: 8px;
       font-size: 13px;
-      color: #10b981;
+      color: var(--accent-green);
       background: rgba(16, 185, 129, 0.1);
-      padding: 4px 12px;
+      padding: 5px 14px;
       border-radius: 20px;
-      border: 1px solid rgba(16, 185, 129, 0.2);
+      border: 1px solid rgba(16, 185, 129, 0.25);
     }
 
     .pulse-dot {
       width: 8px;
       height: 8px;
-      background-color: #10b981;
+      background-color: var(--accent-green);
       border-radius: 50%;
-      box-shadow: 0 0 10px #10b981;
+      box-shadow: 0 0 10px var(--accent-green);
       animation: pulse 1.8s infinite;
     }
 
     @keyframes pulse {
       0% { transform: scale(0.95); opacity: 0.8; }
-      50% { transform: scale(1.2); opacity: 1; box-shadow: 0 0 15px #10b981; }
+      50% { transform: scale(1.2); opacity: 1; box-shadow: 0 0 15px var(--accent-green); }
       100% { transform: scale(0.95); opacity: 0.8; }
     }
 
@@ -125,7 +125,7 @@
     .hero {
       position: relative;
       z-index: 1;
-      padding: 70px 20px 60px 20px;
+      padding: 60px 20px 40px 20px;
       text-align: center;
       max-width: 900px;
       margin: 0 auto;
@@ -135,23 +135,22 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: linear-gradient(90deg, rgba(0, 242, 254, 0.1), rgba(127, 0, 255, 0.1));
+      background: rgba(0, 242, 254, 0.08);
       border: 1px solid rgba(0, 242, 254, 0.3);
       padding: 6px 20px;
       border-radius: 30px;
       font-size: 13px;
       font-weight: 600;
       color: var(--primary-cyan);
-      letter-spacing: 1px;
-      margin-bottom: 25px;
+      margin-bottom: 22px;
       box-shadow: 0 0 20px rgba(0, 242, 254, 0.15);
     }
 
     .hero-title {
-      font-size: clamp(32px, 5vw, 54px);
+      font-size: clamp(34px, 5.5vw, 58px);
       font-weight: 800;
       line-height: 1.2;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
       background: linear-gradient(135deg, #ffffff 30%, var(--primary-cyan) 80%, var(--primary-blue) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -160,18 +159,17 @@
     .hero-subtitle {
       font-size: clamp(15px, 2vw, 18px);
       color: var(--text-muted);
-      max-width: 650px;
-      margin: 0 auto 35px auto;
+      max-width: 680px;
+      margin: 0 auto 32px auto;
       line-height: 1.8;
     }
 
-    /* Buttons */
     .btn-group {
       display: flex;
       justify-content: center;
       gap: 15px;
       flex-wrap: wrap;
-      margin-bottom: 45px;
+      margin-bottom: 50px;
     }
 
     .btn-main {
@@ -183,19 +181,19 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.3s ease;
       cursor: pointer;
     }
 
     .btn-primary {
       background: linear-gradient(135deg, var(--primary-cyan), var(--primary-blue));
       color: #000;
-      box-shadow: 0 8px 25px rgba(0, 242, 254, 0.3);
+      box-shadow: 0 8px 25px rgba(0, 242, 254, 0.35);
     }
 
     .btn-primary:hover {
       transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(0, 242, 254, 0.5);
+      box-shadow: 0 12px 30px rgba(0, 242, 254, 0.55);
     }
 
     .btn-secondary {
@@ -211,61 +209,44 @@
       transform: translateY(-3px);
     }
 
-    /* Feature Cards */
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
+    /* Filter Controls */
+    .filter-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 35px;
+      padding: 0 20px;
+    }
+
+    .filter-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      background: rgba(0, 242, 254, 0.15);
+      color: var(--primary-cyan);
+      border-color: var(--primary-cyan);
+    }
+
+    /* Packages Grid */
+    .packages-section {
+      max-width: 1200px;
       margin: 0 auto 70px auto;
       padding: 0 20px;
     }
 
-    .feature-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      padding: 25px;
-      border-radius: 20px;
-      backdrop-filter: blur(10px);
-      text-align: left;
-      transition: all 0.3s ease;
-    }
-
-    .feature-card:hover {
-      border-color: rgba(0, 242, 254, 0.3);
-      transform: translateY(-5px);
-      background: rgba(255, 255, 255, 0.05);
-    }
-
-    .feature-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      background: rgba(0, 242, 254, 0.1);
-      color: var(--primary-cyan);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      margin-bottom: 15px;
-    }
-
-    .feature-card h3 {
-      font-size: 18px;
-      margin-bottom: 8px;
-      color: #fff;
-    }
-
-    .feature-card p {
-      font-size: 14px;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    /* Packages Section */
     .section-title {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     .section-title h2 {
@@ -276,98 +257,185 @@
 
     .packages-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      max-width: 1100px;
-      margin: 0 auto 80px auto;
-      padding: 0 20px;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 22px;
     }
 
     .pkg-card {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
-      border-radius: 24px;
-      padding: 30px;
+      border-radius: 22px;
+      padding: 28px 24px;
       text-align: center;
       position: relative;
       transition: all 0.3s ease;
       backdrop-filter: blur(10px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
-    .pkg-card.popular {
+    .pkg-card:hover {
+      border-color: rgba(0, 242, 254, 0.4);
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0, 242, 254, 0.15);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .pkg-card.featured {
       border-color: var(--primary-cyan);
-      background: linear-gradient(180deg, rgba(0, 242, 254, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
-      box-shadow: 0 10px 30px rgba(0, 242, 254, 0.15);
+      background: linear-gradient(180deg, rgba(0, 242, 254, 0.09) 0%, rgba(255, 255, 255, 0.02) 100%);
+      box-shadow: 0 8px 25px rgba(0, 242, 254, 0.12);
     }
 
-    .popular-tag {
+    .popular-badge {
       position: absolute;
       top: -12px;
       left: 50%;
       transform: translateX(-50%);
       background: linear-gradient(90deg, var(--primary-cyan), var(--primary-blue));
       color: #000;
-      font-size: 12px;
-      font-weight: 700;
-      padding: 4px 15px;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 14px;
       border-radius: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    .pkg-name {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--primary-cyan);
+      margin-bottom: 6px;
     }
 
     .pkg-speed {
-      font-size: 36px;
+      font-size: 34px;
       font-weight: 800;
       color: #fff;
-      margin: 15px 0 5px 0;
+      margin-bottom: 10px;
     }
 
     .pkg-price {
-      font-size: 24px;
-      color: var(--primary-cyan);
+      font-size: 22px;
+      color: var(--accent-green);
       font-weight: 700;
       margin-bottom: 20px;
+      background: rgba(16, 185, 129, 0.1);
+      padding: 6px 14px;
+      border-radius: 12px;
+      display: inline-block;
     }
 
     .pkg-features {
       list-style: none;
       padding: 0;
-      margin-bottom: 25px;
+      margin-bottom: 22px;
       text-align: left;
     }
 
     .pkg-features li {
-      font-size: 14px;
+      font-size: 13.5px;
       color: var(--text-muted);
-      margin-bottom: 10px;
+      margin-bottom: 9px;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 9px;
     }
 
     .pkg-features li i {
-      color: #10b981;
+      color: var(--accent-green);
     }
 
-    /* Floating Quick Contact Widget */
-    .floating-call {
+    /* Calculator Box */
+    .calc-box {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 35px;
+      max-width: 800px;
+      margin: 0 auto 70px auto;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .calc-box h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    .slider-container {
+      margin: 25px 0;
+    }
+
+    .range-slider {
+      width: 100%;
+      height: 8px;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.1);
+      outline: none;
+      accent-color: var(--primary-cyan);
+      cursor: pointer;
+    }
+
+    .calc-result {
+      display: flex;
+      justify-content: space-around;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--card-border);
+    }
+
+    .calc-item {
+      font-size: 18px;
+      color: var(--text-muted);
+    }
+
+    .calc-item span {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--primary-cyan);
+      display: block;
+    }
+
+    /* Floating Contact Buttons */
+    .floating-container {
       position: fixed;
       bottom: 25px;
       right: 25px;
-      background: linear-gradient(135deg, var(--primary-cyan), var(--primary-blue));
-      color: #000;
-      width: 55px;
-      height: 55px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 100;
+    }
+
+    .float-btn {
+      width: 52px;
+      height: 52px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 22px;
-      box-shadow: 0 10px 25px rgba(0, 242, 254, 0.4);
-      z-index: 100;
+      color: #000;
       text-decoration: none;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
       transition: all 0.3s ease;
     }
 
-    .floating-call:hover {
+    .float-phone {
+      background: linear-gradient(135deg, var(--primary-cyan), var(--primary-blue));
+    }
+
+    .float-whatsapp {
+      background: #25d366;
+      color: #fff;
+    }
+
+    .float-btn:hover {
       transform: scale(1.1);
     }
 
@@ -381,35 +449,25 @@
     }
 
     @media (max-width: 600px) {
-      .top-bar-container {
-        justify-content: center;
-      }
-      .btn-group {
-        flex-direction: column;
-      }
-      .btn-main {
-        width: 100%;
-        justify-content: center;
-      }
+      .top-bar-container { justify-content: center; }
+      .btn-group { flex-direction: column; }
+      .btn-main { width: 100%; justify-content: center; }
+      .calc-box { padding: 25px 18px; }
     }
   </style>
 </head>
 <body>
 
-  <div class="glow-orb-1"></div>
+  <div class="glow-bg"></div>
 
-  <!-- Top Glass Contact Bar -->
+  <!-- Top Glass Bar -->
   <div class="top-bar">
     <div class="top-bar-container">
       <div class="top-contacts">
-        <a href="tel:+8801834259876">
-          <i class="fa-solid fa-phone"></i> +880 1834-259876
-        </a>
-        <a href="mailto:vaivisson@gmail.com">
-          <i class="fa-solid fa-envelope"></i> vaivisson@gmail.com
-        </a>
+        <a href="tel:+8801834259876"><i class="fa-solid fa-phone"></i> +880 1834-259876</a>
+        <a href="mailto:vaivisson@gmail.com"><i class="fa-solid fa-envelope"></i> vaivisson@gmail.com</a>
       </div>
-      <div class="network-badge">
+      <div class="status-badge">
         <span class="pulse-dot"></span>
         <span>Network Status: Online</span>
       </div>
@@ -425,7 +483,7 @@
     <h1 class="hero-title">Akash Online Network</h1>
     
     <p class="hero-subtitle">
-      বাসা, অফিস এবং কর্পোরেট প্রতিষ্ঠানের জন্য আল্ট্রা-ফাস্ট ফাইবার অপটিক ইন্টারনেট এবং নির্ভরযোগ্য নেটওয়ার্ক সলিউশন। কোনো বাফারিং ছাড়াই উপভোগ করুন সুপারস্পিড কানেক্টিভিটি।
+      বাসা, অফিস ও ব্যবসাপ্রতিষ্ঠানের জন্য আল্ট্রা-ফাস্ট ফাইবার অপটিক ইন্টারনেট। বাফারহীন হাই-স্পিড ব্রাউজিং ও নিরবচ্ছিন্ন সেবার অভিজ্ঞতা নিন।
     </p>
 
     <div class="btn-group">
@@ -438,83 +496,179 @@
     </div>
   </section>
 
-  <!-- Key Services / Features -->
-  <div class="features-grid">
-    <div class="feature-card">
-      <div class="feature-icon"><i class="fa-solid fa-gauge-high"></i></div>
-      <h3>হাই-স্পিড ফাইবার</h3>
-      <p>অপটিক্যাল ফাইবারের মাধ্যমে বাফারহীন দ্রুতগতির ইন্টারনেট ডাউনলোড ও আপলোড speed।</p>
+  <!-- Interactive Calculator Section -->
+  <div class="calc-box">
+    <h3><i class="fa-solid fa-calculator" style="color: var(--primary-cyan);"></i> ব্যান্ডউইথ ক্যালকুলেটর</h3>
+    <p style="color: var(--text-muted); font-size: 14px;">আপনার ব্যবহারের প্রয়োজন অনুযায়ী স্পিড নির্ধারণ করুন</p>
+    
+    <div class="slider-container">
+      <input type="range" min="35" max="250" value="50" step="5" class="range-slider" id="speedSlider" oninput="updateCalc()">
     </div>
-    <div class="feature-card">
-      <div class="feature-icon"><i class="fa-solid fa-headset"></i></div>
-      <h3>২৪/৭ সাপোর্ট</h3>
-      <p>যেকোনো কারিগরি সমস্যায় সহায়তার জন্য আমাদের ডেডিকেটেড টিম সবসময় প্রস্তুত।</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
-      <h3>সুরক্ষিত নেটওয়ার্ক</h3>
-      <p>উন্নত সিকিউরিটি ও স্ট্যাবল কানেক্টিভিটি নিশ্চিত করে আপনার ব্যবসা ও বাসাবাড়ির জন্য।</p>
+
+    <div class="calc-result">
+      <div class="calc-item">স্পিড: <span id="calcSpeed">50 Mbps</span></div>
+      <div class="calc-item">আনুমানিক বিল: <span id="calcPrice">৳ ৭০০ / মাস</span></div>
     </div>
   </div>
 
   <!-- Packages Section -->
-  <section id="packages">
+  <section id="packages" class="packages-section">
     <div class="section-title">
-      <h2>আমাদের জনপ্রিয় প্যাকেজসমূহ</h2>
+      <h2>আমাদের প্রিমিয়াম প্যাকেজসমূহ</h2>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="filter-container">
+      <button class="filter-btn active" onclick="filterPkgs('all')">সব প্যাকেজ</button>
+      <button class="filter-btn" onclick="filterPkgs('budget')">বাজেট friendly</button>
+      <button class="filter-btn" onclick="filterPkgs('family')">ফ্যামিলি ইউজার</button>
+      <button class="filter-btn" onclick="filterPkgs('heavy')">গেমিং / বিজনেস</button>
     </div>
 
     <div class="packages-grid">
-      <!-- Starter -->
-      <div class="pkg-card">
-        <h3 style="color: var(--text-muted);">স্টার্টার</h3>
-        <div class="pkg-speed">15 Mbps</div>
-        <div class="pkg-price">৳ ৫০০ / মাস</div>
-        <ul class="pkg-features">
-          <li><i class="fa-solid fa-check"></i> ২৪ ঘণ্টা আনলিমিটেড</li>
-          <li><i class="fa-solid fa-check"></i> ইউটিউব ও ফেসবুক বাফারলেস</li>
-          <li><i class="fa-solid fa-check"></i> ২৪/৭ টেকনিক্যাল সাপোর্ট</li>
-        </ul>
+      
+      <!-- 1. পায়রা+ -->
+      <div class="pkg-card" data-cat="budget">
+        <div>
+          <div class="pkg-name">পায়রা+</div>
+          <div class="pkg-speed">35 Mbps</div>
+          <div class="pkg-price">৳ ৫২৫ / মাস</div>
+          <ul class="pkg-features">
+            <li><i class="fa-solid fa-check"></i> ২৪ ঘণ্টা আনলিমিটেড স্পিড</li>
+            <li><i class="fa-solid fa-check"></i> ইউটিউব ও ফেসবুক বাফারলেস</li>
+            <li><i class="fa-solid fa-check"></i> ২৪/৭ ক্লায়েন্ট সাপোর্ট</li>
+          </ul>
+        </div>
         <a href="tel:+8801834259876" class="btn-main btn-secondary" style="width: 100%; justify-content: center;">সংযোগ নিন</a>
       </div>
 
-      <!-- Popular -->
-      <div class="pkg-card popular">
-        <div class="popular-tag">MOST POPULAR</div>
-        <h3 style="color: var(--primary-cyan);">স্ট্যান্ডার্ড</h3>
-        <div class="pkg-speed">25 Mbps</div>
-        <div class="pkg-price">৳ ৮০০ / মাস</div>
-        <ul class="pkg-features">
-          <li><i class="fa-solid fa-check"></i> আল্ট্রা-ফাস্ট ফাইবার কানেকশন</li>
-          <li><i class="fa-solid fa-check"></i> BDIX & FTP সার্ভার স্পিড ৫০ Mbps+</li>
-          <li><i class="fa-solid fa-check"></i> ৪K স্ট্রিম ও অনলাইন গেমিং সাপোর্ট</li>
-        </ul>
+      <!-- 2. মেঘনা -->
+      <div class="pkg-card" data-cat="budget">
+        <div>
+          <div class="pkg-name">মেঘনা</div>
+          <div class="pkg-speed">40 Mbps</div>
+          <div class="pkg-price">৳ ৬০০ / মাস</div>
+          <ul class="pkg-features">
+            <li><i class="fa-solid fa-check"></i> দ্রুতগতির ব্রাউজিং ও ডাউনলোড</li>
+            <li><i class="fa-solid fa-check"></i> এইচডি ভিডিও স্ট্রিমিং</li>
+            <li><i class="fa-solid fa-check"></i> ২৪/৭ সাপোর্ট সার্ভিস</li>
+          </ul>
+        </div>
+        <a href="tel:+8801834259876" class="btn-main btn-secondary" style="width: 100%; justify-content: center;">সংযোগ নিন</a>
+      </div>
+
+      <!-- 3. যমুনা -->
+      <div class="pkg-card featured" data-cat="family">
+        <div class="popular-badge">POPULAR CHOICE</div>
+        <div>
+          <div class="pkg-name">যমুনা</div>
+          <div class="pkg-speed">50 Mbps</div>
+          <div class="pkg-price">৳ ৭০০ / মাস</div>
+          <ul class="pkg-features">
+            <li><i class="fa-solid fa-check"></i> আল্ট্রা-ফাস্ট ফাইবার কানেকশন</li>
+            <li><i class="fa-solid fa-check"></i> স্মুথ অনলাইন মিটিং ও গেমিং</li>
+            <li><i class="fa-solid fa-check"></i> হাই-প্রাইওরিটি সাপোর্ট</li>
+          </ul>
+        </div>
         <a href="tel:+8801834259876" class="btn-main btn-primary" style="width: 100%; justify-content: center;">সংযোগ নিন</a>
       </div>
 
-      <!-- Premium -->
-      <div class="pkg-card">
-        <h3 style="color: var(--text-muted);">প্রিমিয়াম</h3>
-        <div class="pkg-speed">40 Mbps</div>
-        <div class="pkg-price">৳ ১২০০ / মাস</div>
-        <ul class="pkg-features">
-          <li><i class="fa-solid fa-check"></i> অফিস ও হেভি ইউজারদের জন্য</li>
-          <li><i class="fa-solid fa-check"></i> রিয়েল আইপি (অন রিকোয়েস্ট)</li>
-          <li><i class="fa-solid fa-check"></i> হাই-প্রাইওরিটি সাপোর্ট</li>
-        </ul>
+      <!-- 4. সুরমা -->
+      <div class="pkg-card" data-cat="family">
+        <div>
+          <div class="pkg-name">সুরমা</div>
+          <div class="pkg-speed">60 Mbps</div>
+          <div class="pkg-price">৳ ৮০০ / মাস</div>
+          <ul class="pkg-features">
+            <li><i class="fa-solid fa-check"></i> বড় পরিবারের চমৎকার পছন্দ</li>
+            <li><i class="fa-solid fa-check"></i> ৪K আল্ট্রা এইচডি স্ট্রিমিং</li>
+            <li><i class="fa-solid fa-check"></i> দ্রুতগতির ফাইল শেয়ারিং</li>
+          </ul>
+        </div>
         <a href="tel:+8801834259876" class="btn-main btn-secondary" style="width: 100%; justify-content: center;">সংযোগ নিন</a>
       </div>
+
+      <!-- 5. তিস্তা -->
+      <div class="pkg-card" data-cat="family">
+        <div>
+          <div class="pkg-name">তিস্তা</div>
+          <div class="pkg-speed">100 Mbps</div>
+          <div class="pkg-price">৳ ১০০০ / মাস</div>
+          <ul class="pkg-features">
+            <li><i class="fa-solid fa-check"></i> ১০০ Mbps ডেডিকেটেড এক্সপেরিয়েন্স</li>
+            <li><i class="fa-solid fa-check"></i> মাল্টি-ডিভাইস স্মুথ কানেক্টিভিটি</li>
+            <li><i class="fa-solid fa-check"></i> ২৪/৭ টেকনিক্যাল কেয়ার</li>
+          </ul>
+        </div>
+        <a href="tel:+8801834259876" class="btn-main btn-secondary" style="width: 100%; justify-content: center;">সংযোগ নিন</a>
+      </div>
+
+      <!-- 6. কর্ণফুলী -->
+      <div class="pkg-card" data-cat="heavy">
+        <div>
+          <div class="pkg-name">কর্ণফুলী</div>
+          <div class="pkg-speed">130 Mbps</div>
+          <div class="pkg-price">৳ ১৩০০ / মাস</div>
+          <ul class="pkg-features">
+            <li><i class="fa-solid fa-check"></i> সুপারফাস্ট ডাউনলোড ও আপলোড</li>
+            <li><i class="fa-solid fa-check"></i> ফ্রিল্যান্সার ও স্মল অফিসের জন্য</li>
+            <li><i class="fa-solid fa-check"></i> ইনস্ট্যান্ট সাপোর্ট কেয়ার</li>
+          </ul>
+        </div>
+        <a href="tel:+8801834259876" class="btn-main btn-secondary" style="width: 100%; justify-content: center;">সংযোগ নিন</a>
+      </div>
+
+      <!-- 7. তিতাস -->
+      <div class="pkg-card" data-cat="heavy">
+        <div>
+          <div class="pkg-name">তিতাস</div>
+          <div class="pkg-speed">150 Mbps</div>
+          <div class="pkg-price">৳ ১৫০০ / মাস</div>
+          <ul class="pkg-features">
+            <li><i class="fa-solid fa-check"></i> প্রিমিয়াম ফাইবার ব্যান্ডউইথ</li>
+            <li><i class="fa-solid fa-check"></i> ল্যাগ-ফ্রি গেমিং ও লাইভ স্ট্রিম</li>
+            <li><i class="fa-solid fa-check"></i> স্পেশাল প্রpriority কাস্টমার সার্ভিস</li>
+          </ul>
+        </div>
+        <a href="tel:+8801834259876" class="btn-main btn-secondary" style="width: 100%; justify-content: center;">সংযোগ নিন</a>
+      </div>
+
+      <!-- 8. ব্রহ্মপুত্র -->
+      <div class="pkg-card" data-cat="heavy">
+        <div>
+          <div class="pkg-name">ব্রহ্মপুত্র</div>
+          <div class="pkg-speed">200 Mbps</div>
+          <div class="pkg-price">৳ ২০০০ / মাস</div>
+          <ul class="pkg-features">
+            <li><i class="fa-solid fa-check"></i> কমার্শিয়াল আল্ট্রা স্পিড</li>
+            <li><i class="fa-solid fa-check"></i> ভারী ডেটা ব্যবহারের জন্য উপযোগী</li>
+            <li><i class="fa-solid fa-check"></i> ডেডিকেটেড নেটওয়ার্ক মনিটরিং</li>
+          </ul>
+        </div>
+        <a href="tel:+8801834259876" class="btn-main btn-secondary" style="width: 100%; justify-content: center;">সংযোগ নিন</a>
+      </div>
+
+      <!-- 9. চিত্রা -->
+      <div class="pkg-card" data-cat="heavy">
+        <div>
+          <div class="pkg-name">চিত্রা</div>
+          <div class="pkg-speed">250 Mbps</div>
+          <div class="pkg-price">৳ ২৫০০ / মাস</div>
+          <ul class="pkg-features">
+            <li><i class="fa-solid fa-check"></i> সর্বোচ্চ ২৫০ Mbps আল্ট্রা স্পিড</li>
+            <li><i class="fa-solid fa-check"></i> কর্পোরেট গ্রেড কানেক্টিভিটি</li>
+            <li><i class="fa-solid fa-check"></i> ভিআইপি সাপোর্ট ও প্রাইওরিটি সার্ভিস</li>
+          </ul>
+        </div>
+        <a href="tel:+8801834259876" class="btn-main btn-secondary" style="width: 100%; justify-content: center;">সংযোগ নিন</a>
+      </div>
+
     </div>
   </section>
 
-  <!-- Floating Call Button -->
-  <a href="tel:+8801834259876" class="floating-call" title="Call Now">
-    <i class="fa-solid fa-phone"></i>
-  </a>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; Akash Online Network. All Rights Reserved. Designed for Maximum Performance.</p>
-  </footer>
-
-</body>
-</html>
+  <!-- Floating Contact Action Buttons -->
+  <div class="floating-container">
+    <a href="https://wa.me/8801834259876" class="float-btn float-whatsapp" target="_blank" title="WhatsApp Chat">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <a href="tel:+8801834259876" class="float-btn float-p
