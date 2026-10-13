@@ -1,275 +1,520 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="bn">
 <head>
-<style>
-  body {
-    /* প্রিমিয়াম ব্লু গ্রেডিয়েন্ট ব্যাকগ্রাউন্ড */
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
-    color: #ffffff;
-    min-height: 100vh;
-    margin: 0;
-  } </style>
-<script src="https://cdn.tailwindcss.com"></script>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0756c9">
-<meta name="description" content="নির্ভরযোগ্য ইন্টারনেট ও নেটওয়ার্ক সার্ভিস।">
-<title>AKASH ONLINE NETWORK | Internet & Network Service</title>
-<style>
-:root{--blue:#0756c9;--blue2:#1687ff;--navy:#061a3a;--ink:#12213b;--muted:#65738a;--pale:#eef6ff;--line:#dce7f5;--white:#fff}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6}a{text-decoration:none;color:inherit}.wrap{width:min(1120px,92%);margin:auto}
-header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid #e7edf6}
-.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.04em;color:var(--blue);line-height:1.05}.brand small{display:block;font-size:10px;letter-spacing:.35em;margin-top:5px;color:#234d8d}
-.logo{height:47px;width:47px;border-radius:50%;background:linear-gradient(145deg,#32a0ff,#0342b6);position:relative;box-shadow:0 7px 18px #0756c933;flex-shrink:0}
-.logo:before{content:"";position:absolute;left:9px;top:11px;width:9px;height:9px;border:3px solid white;border-radius:50%;box-shadow:0 13px 0 -3px #fff,0 26px 0 -3px #fff}
-.logo:after{content:"";position:absolute;left:21px;top:15px;width:18px;height:4px;background:white;border-radius:4px;box-shadow:0 13px 0 white,0 26px 0 white}
-.links{display:flex;gap:25px;align-items:center;font-size:14px;font-weight:650}.links a:hover{color:var(--blue)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--blue);color:white;padding:13px 20px;border-radius:12px;font-weight:750;border:0;cursor:pointer;box-shadow:0 8px 20px #0756c926}.btn:hover{background:#0346ac;transform:translateY(-1px)}.btn.light{background:white;color:var(--blue);box-shadow:none}.menu{display:none}
-.hero{overflow:hidden;background:radial-gradient(ellipse at 82% 15%,#dceeff 0,transparent 38%),linear-gradient(135deg,#f7fbff,#fff 55%,#edf5ff);padding:82px 0 72px}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:50px}.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #cfe2ff;background:#fff;padding:7px 12px;border-radius:100px;color:var(--blue);font-size:12px;font-weight:800;letter-spacing:.08em}.dot{width:8px;height:8px;border-radius:50%;background:#20c77a;box-shadow:0 0 0 4px #20c77a22}h1{font-size:clamp(38px,5vw,64px);line-height:1.08;letter-spacing:-.045em;margin:22px 0 18px;color:var(--navy)}h1 span{color:var(--blue)}.hero p{font-size:17px;color:var(--muted);max-width:570px;margin:0 0 27px}.actions{display:flex;gap:12px;flex-wrap:wrap}.micro{display:flex;gap:20px;flex-wrap:wrap;margin-top:27px;color:#536681;font-size:13px}.micro span{display:flex;gap:7px;align-items:center}.check{color:#08a86a;font-weight:900}
-.visual{min-height:360px;display:grid;place-items:center;position:relative}.orb{width:min(330px,75vw);aspect-ratio:1;border-radius:50%;background:linear-gradient(145deg,#2195ff,#0342b6);box-shadow:inset -20px -20px 55px #002f8c66,0 28px 65px #0756c933;position:relative;display:grid;place-items:center}.orb:before{content:"";position:absolute;inset:22px;border:1px solid #ffffff55;border-radius:50%}.signal{position:absolute;left:17%;right:-20%;height:10px;border-radius:20px;background:white;box-shadow:0 0 0 1px #ffffff55}.signal:before{content:"";position:absolute;left:-14px;top:-8px;width:22px;height:22px;border-radius:50%;border:5px solid white;background:#0861d5}.s1{top:29%;transform:rotate(-8deg)}.s2{top:46%;left:10%;transform:rotate(-2deg)}.s3{top:62%;left:23%;transform:rotate(-7deg)}.s4{top:76%;left:36%;transform:rotate(-11deg)}.float-card{position:absolute;background:#fff;border:1px solid #e4edf9;border-radius:16px;padding:14px 17px;box-shadow:0 18px 40px #143a6c16;font-size:13px;font-weight:800}.float-card small{display:block;color:var(--muted);font-weight:500}.fc1{top:25px;left:0}.fc2{bottom:22px;right:-4px}
-section{padding:76px 0}.section-head{text-align:center;max-width:650px;margin:0 auto 38px}.section-head .tag{color:var(--blue);font-weight:850;text-transform:uppercase;letter-spacing:.14em;font-size:11px}.section-head h2{font-size:clamp(28px,3vw,40px);line-height:1.2;margin:9px 0 12px;color:var(--navy);letter-spacing:-.03em}.section-head p{color:var(--muted);margin:0}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{border:1px solid var(--line);border-radius:20px;padding:25px;background:white;transition:.2s}.card:hover{transform:translateY(-4px);box-shadow:0 16px 35px #153a6810;border-color:#b7d4ff}.ico{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:var(--pale);color:var(--blue);font-size:24px}.card h3{margin:17px 0 7px;font-size:19px;color:var(--navy)}.card p{color:var(--muted);font-size:14px;margin:0}
-.why{background:#f7faff}.why-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}.why-copy h2{font-size:clamp(30px,3.5vw,44px);line-height:1.15;color:var(--navy);margin:0 0 14px}.why-copy p{color:var(--muted)}.feature-list{display:grid;grid-template-columns:1fr 1fr;gap:14px}.feature{background:#fff;border:1px solid var(--line);padding:18px;border-radius:16px}.feature b{display:block;margin-bottom:4px;color:var(--navy)}.feature span{font-size:13px;color:var(--muted)}
-.packages{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.package{border:1px solid var(--line);border-radius:20px;padding:25px;position:relative}.package.featured{border:2px solid var(--blue);box-shadow:0 14px 36px #0756c91a}.popular{position:absolute;right:16px;top:16px;font-size:10px;font-weight:900;letter-spacing:.1em;color:var(--blue);background:#e8f2ff;border-radius:100px;padding:5px 8px}.package h3{margin:0;color:var(--navy)}.package p{color:var(--muted);font-size:13px}.price{font-size:30px;font-weight:900;color:var(--blue);margin:16px 0}.price small{font-size:12px;color:var(--muted);font-weight:500}.package ul{list-style:none;padding:0;margin:18px 0 23px}.package li{padding:7px 0;color:#43536d;font-size:14px}.package li:before{content:"✓";color:#08a86a;font-weight:900;margin-right:9px}.package .btn{width:100%}.note{text-align:center;font-size:12px;color:var(--muted);margin-top:18px}
-.contact{background:linear-gradient(135deg,#06265b,#0756c9);color:white}.contact .section-head h2,.contact .section-head p{color:white}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:start}.contact-info h3{font-size:24px;margin:0 0 12px}.contact-info p{color:#d2e3ff}.contact-line{display:flex;gap:13px;align-items:center;margin:20px 0}.contact-line .ico{background:#ffffff18;color:white}.contact-line small{display:block;color:#bcd5ff}.contact-line b{font-size:15px}.form{background:#fff;color:var(--ink);border-radius:20px;padding:25px;display:grid;gap:13px}.form label{font-size:12px;font-weight:800;color:#52627b}.form input,.form textarea,.form select{width:100%;border:1px solid #d8e2f0;border-radius:10px;padding:12px;font:inherit;margin-top:5px;background:white}.form textarea{min-height:85px;resize:vertical}.form .btn{width:100%}
-footer{padding:26px 0;background:#041735;color:#b9c9e2;font-size:12px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot strong{color:white;letter-spacing:.05em}
-@media(max-width:800px){.links{display:none}.menu{display:block;border:1px solid var(--line);border-radius:10px;padding:9px 12px;background:#fff;color:var(--blue);font-weight:800}.hero{padding:55px 0}.hero-grid,.why-grid,.contact-grid{grid-template-columns:1fr}.visual{min-height:310px}.cards,.packages{grid-template-columns:1fr}.feature-list{grid-template-columns:1fr 1fr}.hero-grid{gap:20px}section{padding:58px 0}}
-@media(max-width:440px){.feature-list{grid-template-columns:1fr}.brand{font-size:13px}.brand small{font-size:9px}.nav{height:68px}.visual{min-height:270px}.orb{width:245px}.fc1{left:-2px}.fc2{right:-2px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akash Online Network — High-Speed Internet Solutions</title>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-dark: #060913;
+      --card-bg: rgba(255, 255, 255, 0.03);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --primary-cyan: #00f2fe;
+      --primary-blue: #4facfe;
+      --accent-purple: #7f00ff;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Hind Siliguri', 'Outfit', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Ambient Background Glows */
+    .glow-orb-1 {
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0, 242, 254, 0.15) 0%, rgba(127, 0, 255, 0.05) 50%, transparent 70%);
+      filter: blur(80px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Top Glass Bar */
+    .top-bar {
+      position: relative;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+
+    .top-bar-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .top-contacts {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .top-contacts a {
+      color: var(--text-muted);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .top-contacts a:hover {
+      color: var(--primary-cyan);
+      transform: translateY(-1px);
+    }
+
+    .network-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #10b981;
+      background: rgba(16, 185, 129, 0.1);
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(16, 185, 129, 0.2);
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #10b981;
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.2); opacity: 1; box-shadow: 0 0 15px #10b981; }
+      100% { transform: scale(0.95); opacity: 0.8; }
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      z-index: 1;
+      padding: 70px 20px 60px 20px;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(90deg, rgba(0, 242, 254, 0.1), rgba(127, 0, 255, 0.1));
+      border: 1px solid rgba(0, 242, 254, 0.3);
+      padding: 6px 20px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--primary-cyan);
+      letter-spacing: 1px;
+      margin-bottom: 25px;
+      box-shadow: 0 0 20px rgba(0, 242, 254, 0.15);
+    }
+
+    .hero-title {
+      font-size: clamp(32px, 5vw, 54px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, #ffffff 30%, var(--primary-cyan) 80%, var(--primary-blue) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(15px, 2vw, 18px);
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto 35px auto;
+      line-height: 1.8;
+    }
+
+    /* Buttons */
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 45px;
+    }
+
+    .btn-main {
+      padding: 14px 28px;
+      border-radius: 14px;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary-cyan), var(--primary-blue));
+      color: #000;
+      box-shadow: 0 8px 25px rgba(0, 242, 254, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0, 242, 254, 0.5);
+    }
+
+    .btn-secondary {
+      background: var(--card-bg);
+      color: var(--text-main);
+      border: 1px solid var(--card-border);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(0, 242, 254, 0.4);
+      transform: translateY(-3px);
+    }
+
+    /* Feature Cards */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto 70px auto;
+      padding: 0 20px;
+    }
+
+    .feature-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 25px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      text-align: left;
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+      border-color: rgba(0, 242, 254, 0.3);
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(0, 242, 254, 0.1);
+      color: var(--primary-cyan);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .feature-card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    .feature-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Packages Section */
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      margin: 0 auto 80px auto;
+      padding: 0 20px;
+    }
+
+    .pkg-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 30px;
+      text-align: center;
+      position: relative;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .pkg-card.popular {
+      border-color: var(--primary-cyan);
+      background: linear-gradient(180deg, rgba(0, 242, 254, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+      box-shadow: 0 10px 30px rgba(0, 242, 254, 0.15);
+    }
+
+    .popular-tag {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(90deg, var(--primary-cyan), var(--primary-blue));
+      color: #000;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 15px;
+      border-radius: 20px;
+    }
+
+    .pkg-speed {
+      font-size: 36px;
+      font-weight: 800;
+      color: #fff;
+      margin: 15px 0 5px 0;
+    }
+
+    .pkg-price {
+      font-size: 24px;
+      color: var(--primary-cyan);
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .pkg-features {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 25px;
+      text-align: left;
+    }
+
+    .pkg-features li {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .pkg-features li i {
+      color: #10b981;
+    }
+
+    /* Floating Quick Contact Widget */
+    .floating-call {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: linear-gradient(135deg, var(--primary-cyan), var(--primary-blue));
+      color: #000;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      box-shadow: 0 10px 25px rgba(0, 242, 254, 0.4);
+      z-index: 100;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .floating-call:hover {
+      transform: scale(1.1);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 30px 20px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .top-bar-container {
+        justify-content: center;
+      }
+      .btn-group {
+        flex-direction: column;
+      }
+      .btn-main {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 <body>
-<header><div class="wrap nav">
-<a class="brand" href="#home" aria-label="Akash Online Network home"><span class="logo"></span><span>AKASH ONLINE<small>NETWORK</small></span></a>
-<nav class="links"><a href="#services">সার্ভিস</a><a href="#about">আমাদের সম্পর্কে</a><a href="#packages">প্যাকেজ</a><a href="#contact">যোগাযোগ</a></nav>
-<a class="btn" href="#contact">সংযোগ নিন ↗</a>
-</div></header>
-<main>
-<section class="hero" id="home"><div class="wrap hero-grid">
-<div><div class="eyebrow"><span class="dot"></span> INTERNET & NETWORK SOLUTIONS</div>
-<h1>Akash Online Network</h1>
-<p>AKASH ONLINE NETWORK — বাসা, অফিস ও ব্যবসার জন্য ইন্টারনেট এবং নেটওয়ার্ক সলিউশন। আপনার সংযোগের প্রয়োজন নিয়ে আজই আমাদের সঙ্গে কথা বলুন।</p>
-<div class="actions"><a class="btn" href="#contact">নতুন সংযোগের জন্য যোগাযোগ করুন →</a><a class="btn light" href="#services">সার্ভিস দেখুন</a></div>
-<div class="micro"><span><b class="check">✓</b> সহায়ক সাপোর্ট</span><span><b class="check">✓</b> বাসা ও অফিসের সমাধান</span><span><b class="check">✓</b> সহজ যোগাযোগ</span></div>
-</div>
-<div class="visual" aria-label="Network technology illustration"><div class="orb"><i class="signal s1"></i><i class="signal s2"></i><i class="signal s3"></i><i class="signal s4"></i></div><div class="float-card fc1">● Network Ready<small>স্মার্ট কানেক্টিভিটি</small></div><div class="float-card fc2">⌁ Connected<small>আপনার নেটওয়ার্ক, আপনার কাজ</small></div></div>
-</div></section>
-<section id="services"><div class="wrap"><div class="section-head"><div class="tag">আমাদের সার্ভিস</div><h2>আপনার সংযোগের জন্য সঠিক সমাধান</h2><p>ব্যক্তিগত ব্যবহার থেকে শুরু করে অফিস ও প্রতিষ্ঠানের নেটওয়ার্ক—আপনার প্রয়োজন অনুযায়ী সেবা।</p></div>
-<div class="cards">
-<div class="card"><div class="ico">⌁</div><h3>ইন্টারনেট সংযোগ</h3><p>বাসা বা অফিসে নতুন রংপুর এলাকায় বাসা বা অফিসে নতুন ইন্টারনেট সংযোগের জন্য যোগাযোগ করুন। উপলভ্যতা ও প্যাকেজ নিশ্চিত করে নিন।</p></div>
-<div class="card"><div class="ico">⌘</div><h3>নেটওয়ার্ক সেটআপ</h3><p>ইন্টারনেট সংযোগ, রাউটার বিক্রি ও সেটআপ, Wi‑Fi কভারেজ এবং ছোট অফিসের নেটওয়ার্ক পরিকল্পনা।</p></div>
-<div class="card"><div class="ico">◉</div><h3>টেকনিক্যাল সাপোর্ট</h3><p>ইন্টারনেট সংযোগ, রাউটার ও নেটওয়ার্ক সমস্যার সহায়তার জন্য যোগাযোগ করুন।</p></div>
-</div></div></section>
-<section class="why" id="about"><div class="wrap why-grid"><div class="why-copy"><div class="tag" style="color:#0756c9;font-weight:850;letter-spacing:.14em;font-size:11px">কেন AKASH ONLINE NETWORK?</div><h2>সহজ যোগাযোগ, পরিষ্কার তথ্য, নির্ভরযোগ্য সেবা।</h2><p>আমাদের লক্ষ্য হলো গ্রাহকের ইন্টারনেট ও নেটওয়ার্কের প্রয়োজন বুঝে উপযুক্ত সমাধান খুঁজে দিতে সাহায্য করা। সার্ভিসের এলাকা, মূল্য ও সংযোগের সময় সরাসরি যোগাযোগ করে নিশ্চিত করুন।</p><a class="btn" href="#contact">আমাদের সঙ্গে কথা বলুন →</a></div>
-<div class="feature-list"><div class="feature"><b>গ্রাহককে গুরুত্ব</b><span>আপনার চাহিদা অনুযায়ী সহায়তা</span></div><div class="feature"><b>সহজ প্রক্রিয়া</b><span>সংযোগের তথ্য এক জায়গায়</span></div><div class="feature"><b>বাসা ও অফিস</b><span>ব্যক্তিগত ও ব্যবসায়িক ব্যবহার</span></div><div class="feature"><b>যোগাযোগের সুবিধা</b><span>ফোন বা WhatsApp-এ অনুরোধ</span></div></div></div></section>
-<section id="packages" class="section">
-  <div class="container">
-    <div class="section-title">
-      <h2>আমাদের সার্ভিস প্যাকেজসমূহ</h2>
-      <p>আপনার প্রয়োজন অনুযায়ী সেরা ব্রডব্যান্ড ইন্টারনেট প্যাকেজ বেছে নিন</p>
-    </div>
-    <div class="packages-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-      
-      <div class="package">
-        <h3>পায়রা+</h3>
-        <p>35 Mbps</p>
-        <div class="price">৳ ৫২৫ <small>/ মাস</small></div>
-        <ul>
-          <li>আনলিমিটেড ইন্টারনেট</li>
-          <li>বাফারলেস স্ট্রিম</li>
-          <li>২৪/৭ কাস্টমার সাপোর্ট</li>
-        </ul>
-      </div>
 
-      <div class="package">
-        <h3>মেঘনা</h3>
-        <p>40 Mbps</p>
-        <div class="price">৳ ৬০০ <small>/ মাস</small></div>
-        <ul>
-          <li>আনলিমিটেড ইন্টারনেট</li>
-          <li>বাফারলেস স্ট্রিম</li>
-          <li>২৪/৭ কাস্টমার সাপোর্ট</li>
-        </ul>
-      </div>
+  <div class="glow-orb-1"></div>
 
-      <div class="package">
-        <h3>যমুনা</h3>
-        <p>50 Mbps</p>
-        <div class="price">৳ ৭০০ <small>/ মাস</small></div>
-        <ul>
-          <li>আনলিমিটেড ইন্টারনেট</li>
-          <li>বাফারলেস স্ট্রিম</li>
-          <li>২৪/৭ কাস্টমার সাপোর্ট</li>
-        </ul>
+  <!-- Top Glass Contact Bar -->
+  <div class="top-bar">
+    <div class="top-bar-container">
+      <div class="top-contacts">
+        <a href="tel:+8801834259876">
+          <i class="fa-solid fa-phone"></i> +880 1834-259876
+        </a>
+        <a href="mailto:vaivisson@gmail.com">
+          <i class="fa-solid fa-envelope"></i> vaivisson@gmail.com
+        </a>
       </div>
-
-      <div class="package featured">
-        <span class="popular">জনপ্রিয়</span>
-        <h3>সুরমা</h3>
-        <p>60 Mbps</p>
-        <div class="price">৳ ৮০০ <small>/ মাস</small></div>
-        <ul>
-          <li>আনলিমিটেড ইন্টারনেট</li>
-          <li>স্মার্ট টিভি ও এইচডি স্ট্রিমিং</li>
-          <li>২৪/৭ কাস্টমার সাপোর্ট</li>
-        </ul>
+      <div class="network-badge">
+        <span class="pulse-dot"></span>
+        <span>Network Status: Online</span>
       </div>
-
-      <div class="package">
-        <h3>তিস্তা</h3>
-        <p>100 Mbps</p>
-        <div class="price">৳ ১০০০ <small>/ মাস</small></div>
-        <ul>
-          <li>হাই স্পিড ইন্টারনেট</li>
-          <li>গেমিং ও স্মুথ ডাউনলোড</li>
-          <li>২৪/৭ কাস্টমার সাপোর্ট</li>
-        </ul>
-      </div>
-
-      <div class="package">
-        <h3>কর্ণফুলী</h3>
-        <p>130 Mbps</p>
-        <div class="price">৳ ১২০০ <small>/ মাস</small></div>
-        <ul>
-          <li>হাই স্পিড ইন্টারনেট</li>
-          <li>মাল্টি-ডিভাইস ব্যবহারের উপযোগী</li>
-          <li>২৪/৭ কাস্টমার সাপোর্ট</li>
-        </ul>
-      </div>
-
-      <div class="package">
-        <h3>তিতাস</h3>
-        <p>150 Mbps</p>
-        <div class="price">৳ ১৫০০ <small>/ মাস</small></div>
-        <ul>
-          <li>অফিস ও হেভি ইউজারদের জন্য</li>
-          <li>ডেডিকেটেড ব্যান্ডউইথ</li>
-          <li>২৪/৭ কাস্টমার সাপোর্ট</li>
-        </ul>
-      </div>
-
-      <div class="package">
-        <h3>ব্রহ্মপুত্র</h3>
-        <p>200 Mbps</p>
-        <div class="price">৳ ২০০০ <small>/ মাস</small></div>
-        <ul>
-          <li>সুপার ফাস্ট স্পিড</li>
-          <li>ডেডিকেটেড ব্যান্ডউইথ</li>
-          <li>ইনস্ট্যান্ট টেকনিক্যাল সাপোর্ট</li>
-        </ul>
-      </div>
-      <div class="package">
-        <h3>চিত্রা</h3>
-        <p>250 Mbps</p>
-        <div class="price">৳ ২৫০০ <small>/ মাস</small></div>
-        <ul>
-          <li>আল্ট্রা ফাস্ট স্পিড</li>
-          <li>কর্পোরেট ও বিজনেস ইউজার</li>
-          <li>ইনস্ট্যান্ট টেকনিক্যাল সাপোর্ট</li>
-        </ul>
-      </div>
-
     </div>
   </div>
-</section>
-  <section id="coverage" class="section" style="background-color: #f7faff; padding: 50px 20px;">
-  <div class="wrap" style="max-width: 1100px; margin: 0 auto;">
-    <div class="section-head" style="text-align: center; margin-bottom: 30px;">
-      <div class="tag" style="color: #0284c7; font-weight: bold; margin-bottom: 5px;">কভারেজ এলাকা</div>
-      <h2>আমাদের ইন্টারনেট সেবা কোথায় কোথায় পাওয়া যায়?</h2>
-      <p>রংপুরের নির্দিষ্ট এলাকায় আমাদের হাই-স্পিড ব্রডব্যান্ড ইন্টারনেট সংযোগ সুবিধা রয়েছে।</p>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-tag">
+      <i class="fa-solid fa-wifi"></i> INTERNET & NETWORK SOLUTIONS
     </div>
     
-    <div class="coverage-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-      
-      <! প্রাইম মেডিকেল>
-      <div class="coverage-card" style="background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-        <h3 style="color: #0f172a; margin-bottom: 10px;">📍 প্রাইম এলাকা</h3>
-        <p style="color: #475569; font-size: 14px;">প্রাইম মেডিকেল কলেজ রোড ও আশেপাশের আবাসিক এলাকায় আমাদের হাই-স্পিড এফটিটিএইচ (FTTH) সংযোগ চালু রয়েছে।</p>
-      </div>
+    <h1 class="hero-title">Akash Online Network</h1>
+    
+    <p class="hero-subtitle">
+      বাসা, অফিস এবং কর্পোরেট প্রতিষ্ঠানের জন্য আল্ট্রা-ফাস্ট ফাইবার অপটিক ইন্টারনেট এবং নির্ভরযোগ্য নেটওয়ার্ক সলিউশন। কোনো বাফারিং ছাড়াই উপভোগ করুন সুপারস্পিড কানেক্টিভিটি।
+    </p>
 
-      <! সুলতান মোড়>
-      <div class="coverage-card" style="background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-        <h3 style="color: #0f172a; margin-bottom: 10px;">📍 সুলতান মোড়</h3>
-        <p style="color: #475569; font-size: 14px;">সুলতান মোড় সংলগ্ন সমস্ত পাড়া ও অলিগলিতে নিরবচ্ছিন্ন ব্রডব্যান্ড ইন্টারনেট ও ওয়াইফাই সেবা প্রদান করা হয়।</p>
-      </div>
-
-      <! পীরজাবাদ সরকারপাড়া>
-      <div class="coverage-card" style="background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-        <h3 style="color: #0f172a; margin-bottom: 10px;">📍 পীরজাবাদ জামে মসজিদ এলাকা</h3>
-        <p style="color: #475569; font-size: 14px;">পীরজাবাদ জামে মসজিদ সংলগ্ন স্থানীয় বাড়ি ও দোকানপাটে দ্রুত গতির ইন্টারনেট সংযোগের ব্যবস্থা রয়েছে।</p></div>  </div>
-  </div>
-  </section>
-  <section id="speedtest" class="section" style="background-color: #ffffff; padding: 50px 20px; text-align: center;">
-  <div class="wrap" style="max-width: 900px; margin: 0 auto;">
-    <div class="section-head" style="margin-bottom: 25px;">
-      <div class="tag" style="color: #0284c7; font-weight: bold; margin-bottom: 5px;">ইন্টারনেট টেস্ট</div>
-      <h2>আপনার ইন্টারনেটের স্পিড মেপে নিন</h2>
-      <p>আপনার রিয়েল-টাইম ডাউনলোড এবং আপলোড স্পিড পরীক্ষা করতে নিচের বাটনে ক্লিক করুন।</p>
-    </div>
-    <div style="background: #f8fafc; padding: 30px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
-      <div style="font-size: 40px; margin-bottom: 10px;">🚀</div>
-      <h3 style="margin-bottom: 15px; color: #1e293b;">লাইভ স্পিড টেস্ট</h3>
-      <p style="color: #64748b; font-size: 14px; margin-bottom: 20px;">সঠিক স্পিড পেতে টেস্ট শুরু করার আগে অন্য সব ব্যাকগ্রাউন্ড ডাউনলোড বন্ধ রাখুন।</p>
-      
-      <!-- Speedtest Button -->
-      <a href="https://www.speedtest.net/" target="_blank" style="display: inline-block; background-color: #0284c7; color: #ffffff; padding: 12px 30px; font-weight: bold; border-radius: 6px; text-decoration: none; transition: 0.3s;">
-        এখনই স্পিড টেস্ট করুন (Speedtest.net)
+    <div class="btn-group">
+      <a href="tel:+8801834259876" class="btn-main btn-primary">
+        <i class="fa-solid fa-headset"></i> নতুন সংযোগের জন্য কল করুন
+      </a>
+      <a href="#packages" class="btn-main btn-secondary">
+        <i class="fa-solid fa-bolt"></i> প্যাকেজসমূহ দেখুন
       </a>
     </div>
-  </div>
   </section>
- <section class="contact" id="contact">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="tag">যোগাযোগ</div>
-      <h2>আমাদের সাথে যোগাযোগ করুন</h2>
-      <p>নতুন ইন্টারনেট সংযোগ বা যেকোনো প্রয়োজনে আমাদের সাথে সরাসরি যোগাযোগ করুন।</p>
+
+  <!-- Key Services / Features -->
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon"><i class="fa-solid fa-gauge-high"></i></div>
+      <h3>হাই-স্পিড ফাইবার</h3>
+      <p>অপটিক্যাল ফাইবারের মাধ্যমে বাফারহীন দ্রুতগতির ইন্টারনেট ডাউনলোড ও আপলোড speed।</p>
     </div>
-    <div class="contact-grid">
-      <div class="contact-info">
-        <h3>AKASH ONLINE NETWORK</h3>
-        <div class="contact-line">
-          <div class="ico">☎</div>
-          <div><small>ফোন / WhatsApp</small><br><strong>+8801834259876</strong></div>
-        </div>
-        <div class="contact-line">
-          <div class="ico">📍</div>
-          <div><small>সার্ভিস এলাকা</small><br><strong>রংপুর সদর ও আশেপাশের এলাকা</strong></div>
-        </div>
-        <div class="contact-line">
-  <div class="ico">✉</div>
-  <div>
-    <small>ইমেইল</small><br>
-    <a href="mailto:Vaivvisson@gmail.com" style="color: #ffffff; text-decoration: none;">
-      <strong>Vaivvisson@gmail.com</strong>
-    </a>
+    <div class="feature-card">
+      <div class="feature-icon"><i class="fa-solid fa-headset"></i></div>
+      <h3>২৪/৭ সাপোর্ট</h3>
+      <p>যেকোনো কারিগরি সমস্যায় সহায়তার জন্য আমাদের ডেডিকেটেড টিম সবসময় প্রস্তুত।</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+      <h3>সুরক্ষিত নেটওয়ার্ক</h3>
+      <p>উন্নত সিকিউরিটি ও স্ট্যাবল কানেক্টিভিটি নিশ্চিত করে আপনার ব্যবসা ও বাসাবাড়ির জন্য।</p>
+    </div>
   </div>
-        </div>
+
+  <!-- Packages Section -->
+  <section id="packages">
+    <div class="section-title">
+      <h2>আমাদের জনপ্রিয় প্যাকেজসমূহ</h2>
+    </div>
+
+    <div class="packages-grid">
+      <!-- Starter -->
+      <div class="pkg-card">
+        <h3 style="color: var(--text-muted);">স্টার্টার</h3>
+        <div class="pkg-speed">15 Mbps</div>
+        <div class="pkg-price">৳ ৫০০ / মাস</div>
+        <ul class="pkg-features">
+          <li><i class="fa-solid fa-check"></i> ২৪ ঘণ্টা আনলিমিটেড</li>
+          <li><i class="fa-solid fa-check"></i> ইউটিউব ও ফেসবুক বাফারলেস</li>
+          <li><i class="fa-solid fa-check"></i> ২৪/৭ টেকনিক্যাল সাপোর্ট</li>
+        </ul>
+        <a href="tel:+8801834259876" class="btn-main btn-secondary" style="width: 100%; justify-content: center;">সংযোগ নিন</a>
       </div>
-      <form class="form" id="requestForm">
-        <label>আপনার নাম<input id="customerName" type="text" placeholder="যেমন: আব্দুর রহিম" required></label>
-        <label>মোবাইল নম্বর<input id="customerPhone" type="tel" placeholder="01XXXXXXXXX" required></label>
-        <label>এলাকা / ঠিকানা<input id="customerArea" type="text" placeholder="যেমন: ধাপ, রংপুর" required></label>
-        <button class="btn" type="submit">WhatsApp এ অনুরোধ পাঠান</button>
-      </form>
+
+      <!-- Popular -->
+      <div class="pkg-card popular">
+        <div class="popular-tag">MOST POPULAR</div>
+        <h3 style="color: var(--primary-cyan);">স্ট্যান্ডার্ড</h3>
+        <div class="pkg-speed">25 Mbps</div>
+        <div class="pkg-price">৳ ৮০০ / মাস</div>
+        <ul class="pkg-features">
+          <li><i class="fa-solid fa-check"></i> আল্ট্রা-ফাস্ট ফাইবার কানেকশন</li>
+          <li><i class="fa-solid fa-check"></i> BDIX & FTP সার্ভার স্পিড ৫০ Mbps+</li>
+          <li><i class="fa-solid fa-check"></i> ৪K স্ট্রিম ও অনলাইন গেমিং সাপোর্ট</li>
+        </ul>
+        <a href="tel:+8801834259876" class="btn-main btn-primary" style="width: 100%; justify-content: center;">সংযোগ নিন</a>
+      </div>
+
+      <!-- Premium -->
+      <div class="pkg-card">
+        <h3 style="color: var(--text-muted);">প্রিমিয়াম</h3>
+        <div class="pkg-speed">40 Mbps</div>
+        <div class="pkg-price">৳ ১২০০ / মাস</div>
+        <ul class="pkg-features">
+          <li><i class="fa-solid fa-check"></i> অফিস ও হেভি ইউজারদের জন্য</li>
+          <li><i class="fa-solid fa-check"></i> রিয়েল আইপি (অন রিকোয়েস্ট)</li>
+          <li><i class="fa-solid fa-check"></i> হাই-প্রাইওরিটি সাপোর্ট</li>
+        </ul>
+        <a href="tel:+8801834259876" class="btn-main btn-secondary" style="width: 100%; justify-content: center;">সংযোগ নিন</a>
+      </div>
     </div>
-  </div>
- </section>
-</main>
-<footer><div class="wrap foot"><strong>AKASH ONLINE NETWORK</strong><span>© <span id="year"></span> AKASH ONLINE NETWORK. সর্বস্বত্ব সংরক্ষিত।</span><span>Internet • Network • Support</span></div></footer>
-<script>
-document.getElementById('year').textContent=new Date().getFullYear();
-// IMPORTANT: Replace 8801XXXXXXXXX with the business WhatsApp number, including Bangladesh country code 88.
-const WHATSAPP_NUMBER = '8801834259876';
-document.getElementById('requestForm').addEventListener('submit',function(e){
- e.preventDefault();
- const n=document.getElementById('customerName').value.trim();
- const p=document.getElementById('customerPhone').value.trim();
- const a=document.getElementById('customerArea').value.trim();
- const s=document.getElementById('customerService').value;
- const m=document.getElementById('customerMessage').value.trim();
- const message=`আসসালামু আলাইকুম, AKASH ONLINE NETWORK।\nনাম: ${n}\nফোন: ${p}\nএলাকা: ${a}\nসেবা: ${s}\nঅতিরিক্ত তথ্য: ${m||'নেই'}`;
- if(WHATSAPP_NUMBER==='8801XXXXXXXXX'){alert('ওয়েবসাইট প্রকাশের আগে HTML ফাইলে WHATSAPP_NUMBER-এর জায়গায় আপনার ব্যবসার WhatsApp নম্বর বসান।');return;}
- window.open('https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent(message),'_blank','noopener');
-});
-</script>
-</body></html>
+  </section>
+
+  <!-- Floating Call Button -->
+  <a href="tel:+8801834259876" class="floating-call" title="Call Now">
+    <i class="fa-solid fa-phone"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; Akash Online Network. All Rights Reserved. Designed for Maximum Performance.</p>
+  </footer>
+
+</body>
+</html>
